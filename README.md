@@ -21,7 +21,7 @@
 1. Убедитесь, что у вас установлен Python 3.
 2. Склонируйте репозиторий или просто скачайте `main.py`:
    ```bash
-   git clone https://github.com/ZemskovIK/tkinter-draw.git
+   git clone https://github.com/zemskovik/tkinter-draw.git
    cd tkinter-draw
    ```
 3. Запустите приложение:
