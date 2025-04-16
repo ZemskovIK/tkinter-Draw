@@ -22,7 +22,7 @@
 2. Склонируйте репозиторий или просто скачайте `main.py`:
    ```bash
    git clone https://github.com/ZemskovIK/tkinter-draw.git
-   cd tkinter-function-plotter
+   cd tkinter-draw
    ```
 3. Запустите приложение:
    ```bash
