@@ -1,13 +1,13 @@
 from tkinter import *
 from math import *
 
-width = 500
-height = 500
-scale = 30
+width = 600
+height = 600
+scale = 50
 line_x = width // 2
 line_y = height // 2
-x_min, x_max = -3, 3
-y_min, y_max = -2, 2
+x_min, x_max = -5, 5
+y_min, y_max = -5, 5
 
 def draw_axes():
     draw_button.pack_forget()
@@ -18,6 +18,16 @@ def draw_axes():
     
     canvas.create_line(0, line_y, width, line_y, fill="black")
     canvas.create_line(line_x, 0, line_x, height, fill="black")
+
+    for i in range(x_min, x_max + 1):
+        if i == 0: continue
+        current_x = line_x + i * scale
+        canvas.create_line(current_x, 0, current_x, height, fill="lightgray", dash=(2,2))
+
+    for i in range(y_min, y_max + 1):
+        if i == 0: continue
+        current_y = line_y - i * scale
+        canvas.create_line(0, current_y, width, current_y, fill="lightgray", dash=(2,2))
 
     for i in range(x_min, x_max + 1):
         current_x = line_x + i * scale
