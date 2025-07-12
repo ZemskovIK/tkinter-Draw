@@ -43,14 +43,17 @@ def plot_function(canvas):
         x += 1 / scale
 
 root = Tk()
-root.title("График функции y = sin(x) + cos(x)")
+root.title("График функции")
 root.geometry(f'{width}x{height}+500+150')
 root.iconbitmap(default="./function.ico")
 
-canvas = Canvas(root, width=width, height=height, bg="light blue")
+title_label = Label(root, text="y = sin(x) + cos(x)", font=("Arial", 10))
+title_label.pack(pady=5)
+
+canvas = Canvas(root, width=width, height=height, bg="white")
 canvas.pack()
 
-draw_button = Button(text="Давайте рисовать!", command=draw_axes)
+draw_button = Button(text="Построить график", command=draw_axes)
 draw_button.place(relx=0.5, rely=0.5, anchor=CENTER)
 
 root.mainloop()
